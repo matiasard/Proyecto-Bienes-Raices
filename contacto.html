@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.8">
+    <title>Bienes Raices - MatiaSard</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/Normalize.css">
+    <link rel="stylesheet" href="CSS/Estilo.css">
+</head>
+
+
+<body>
+
+    <header class="site-header ">
+        <div class="contenedor cotenido-header">
+            <div class="barra">
+                <a href="/index.html">
+                    <img src="img/logo.svg" alt="Logo">
+                </a>
+                <nav class="navegacion">
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="anuncio.html">Anuncios</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav> <!-- Navegación -->
+            </div>
+        </div>
+    </header>
+
+    <h1 class="centrar-texto fw-300 size-14">Contacto</h1>
+
+    <img src="/img/destacada3.jpg" alt="Imag-Principal">
+
+
+    <main class="seccion contenedor contenido-centrado">
+
+        <h2 class="fw-300 centrar-texto">Llena el Formulario de Contatacto</h2>
+                    <!-- TABLA DE FORMULARIO -->
+        <fieldset>
+                    <!-- INFORMACION PERSONAL: -->
+           <legend>Información Personal</legend>
+            <form action="" class="size-12">
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Tu Nombre">
+
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" placeholder="Tu Edad">
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" required placeholder="Tu Correo Electronico">
+
+                <label for="telefono">Teléfeono:</label>
+                <input type="tel" id="telefono" required placeholder="Tu Teléfeno">
+
+                <label for="mensaje">Mensaje</label>
+                <textarea name="mensaje" id="" cols="60" rows="3"></textarea>
+                
+            </form>
+        </fieldset>
+                    <!-- INFORMACIÓN SOBRE LA PROPIEDAD: -->
+        <fieldset>
+            <legend>Información Sobre Propiedad</legend>
+            <form action="" class="size-12">
+                <label for="opciones">Vende o Compra</label>
+                <select name="opcion" id="">
+                    <option value="" disabled selected>-- Seleccione --</option>
+                    <option value="compra">Compra</option>
+                    <option value="vende">Vende</option>
+                </select>
+                
+                <label for="cantidad" >Cantidad:</label>
+                <input type="number" min="0" max="10" placeholder="0">
+                
+            </form>
+        </fieldset>
+                    <!-- FORMULARIO CONTACTO: -->
+        <fieldset>
+            <legend>Contacto</legend>
+            <form action="" class="size-12">
+
+                <p>Como desea ser Contactado:</p>
+
+                <div class="forma-contacto">
+                    <label for="telefono">Telefono</label>
+                    <input type="radio" name="contacto" value="telefono" id="telefono">
+
+                    <label for="correo">E-mail</label>
+                    <input type="radio" name="contacto" value="correo" id="correo"> <!-- No puedo volver a usar el "email" por que la id es unica y agregue el "name" para que halla relacion entre ambos y sepan la existencia de ambos -->
+                </div>
+
+                <p>Si Eligio Telefono, elija la Fecha y Hora</p>
+                <label for="fecha">Fecha</label>
+                <input type="date" id="fecha">
+
+                <label for="date">Hora</label>
+                <input type="time" id="hora" min="09:00" max="18:00">
+
+                <!-- input type= "password" evita que se vea los alfanumerico
+                     input type= "search"   opcion para buscar
+                     input type= "url"      funcion en el telefono con el boton .com  -->
+            </form>
+        </fieldset>
+        <input type="submit" value="Enviar" class="boton boton-verde">
+        
+    </main>
+
+    <footer class="site-footer seccion">
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion">
+                <a href="nosotros.html">Nosotros</a>
+                <a href="anuncio.html">Anuncios</a>
+                <a href="blog.html">Blog</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <p class="copyright">Tdos los Derechos Reservados 2020 &copy; Matia Sard</p>
+        </div>
+    </footer>
+</body>
+
+</html>

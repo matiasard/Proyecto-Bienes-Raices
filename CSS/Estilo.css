@@ -1,0 +1,442 @@
+html{
+    box-sizing: border-box;
+    font-size: 65.5%; /* Reset para REMS - 62.5%=10px de 16px*/
+    *, *:before, *:after{  /* Paul Irish: Google (arregla el conflicto entre padding y width*/
+        box-sizing: inherit;
+    }
+}
+body{
+    font-family: 'Lato',sans-serif;
+    line-height: 2rem;
+}
+
+img{  /* Imagen RESPONSIVA: va a estar en la mayoria de los protectos*/
+    max-width: 100%;
+}
+
+/**  --- GLOBALES  --- **/
+
+.contenedor{
+    max-width: 80%;
+    /*max-width: 1200rem;*/
+    /*max-width: 1200px;*/
+    margin: 0 auto 0 auto;
+}
+
+h1{
+    font-size: 2.4rem;
+    line-height: 2.5rem;
+}
+
+h2{
+    font-size: 3.4rem;
+    line-height: 3rem;
+}
+
+h3{
+    font-size: 3rem;
+}
+
+h4{
+    font-size: 2.8rem;
+}
+
+p{
+    font-size: 1.4rem;
+}
+
+/** --- Utilidades - FRAMEWORK --- **/
+
+.seccion{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.size-12{
+    font-size: 1.6rem;
+}
+.size-14{
+    font-size: 3rem;
+}
+
+
+.fw-300{
+    font-weight: 300;
+}
+.centrar-texto{
+    text-align: center;
+}
+.d-block{ /*Opcional: */
+    display: block !importan;
+}
+
+
+/** --- Navegación --- **/
+
+.navegacion a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.8rem; /* =18px */
+    margin-right: 2rem;
+}
+.navegacion a:hover{ /* Pseudo Selectores */
+    color: limegreen;
+    transition: .3s;
+}
+.navegacion a:last-of-type{
+    margin: 0;
+}
+
+/** --- Iconos Nosotros --- */
+
+.icono-nosotros{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    
+}
+.icono{
+    flex-basis: CALC(33.3% - 1rem);
+    text-align: center;
+}
+.icono h3{
+    text-transform: uppercase;
+}
+
+
+/*.encabezado-nosotros{  -Reenplaxado por la linea n° 38 (utilidades- Framework)
+    font-weight: 300;
+    text-align: center;
+}*/
+
+
+/* --- Header* --- */
+
+.site-header{
+    background-color: #333333;
+    padding: 1rem 3rem 0rem;
+}
+.site-header.inicio{
+    background-image: url(../img/header.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 60rem;
+}
+
+.cotenido-header{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cotenido-header h1{
+    color: #ffffff;
+    padding-bottom: 2rem;
+    max-width: 30rem;/*60rem recomendado*/
+    line-height: 3rem;/*2rem recomendado*/
+}
+
+.barra{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+/** --- Anuncios --- **/
+
+.contenedor-anuncio{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /** Combo con: "flex-shrink" Para que se posiciones abajo (solo 3 filas) y no esten todos los Anuncios Apretados. **/
+}
+
+.anuncio{
+    flex-shrink: 0; /** Evita que se encojan por el flex-basic si hay muchos articulos y que siempre tome el tamaño de la base osea "33.7% **/
+    /**flex-grow: 1; El contenido tiene una base, pero si el contenido tiene espacio va a crecer (Flex block: CAJA FLEXIBLE) **/
+ flex-basis: calc(33.7% - 2rem);
+    /** flex: 0 0 calc(33.7% - 2rem); Forma Reducida de escribir: flex-grow, flex-shrink y flex-basis. En ese orden. **/
+    
+    border-style: solid;
+    border-color: #b5b5b5;
+    border-width: 0.5rem; /*1px recomendado*/
+    background-color: #f5f5f5;
+    margin-bottom: 1.5rem;
+}
+
+.contenido-anuncio{
+    padding: 2rem;
+}
+
+.contenido-anuncio h3{
+    margin: 0;
+    text-align: center;
+    line-height: 2.5rem;
+    
+}
+.contenido-anuncio p{
+    margin: 0;
+    padding-top: 8px
+}
+
+.precio{
+    color: #71B100;
+    font-weight: 700;
+    /*padding-bottom: 1.3rem; opcional MS*/
+}
+
+.icono-caracteristica{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    /*justify-content: space-between;*/ /*opcional en caso de que no modificara el "li"*/
+    align-content: center;
+}
+.icono-caracteristica li{
+    flex: 1;
+}
+
+/** -- BOTONES -- **/
+
+.boton{
+    color: #FFFFFF;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 0.9rem 2.5rem;
+    margin-top: 1rem;
+    display: inline-block; /*Hacer que los enlace este como bloque y afecte el "Margin-Top"*/
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 17px;
+    border: none;
+}
+
+.boton:hover{ 
+    cursor: pointer; /* Cursos con la forma de la "Mano" cuando pasa sobre el cursor*/
+}
+
+.boton-amarillo{
+    background-color: #E08709;
+    display: block; /*Con el Framework (utilidades) deberia de funcionar pero no esta funcionando*/
+}
+
+.boton-verde{
+    background-color: #71B100;
+}
+
+.ver-todas{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/** --- Contacto Home --- **/
+
+.imagen-contacto{
+    background-image: url(../img/encuentra.jpg);
+    height: 40rem;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.contenido-contacto{
+    flex: 1;
+    color: white;
+}
+
+.contenido-contacto p{
+    font-size: 1.8rem;
+}
+.contenido-contacto .boton-verde{
+    background-color: #E08709;
+}
+
+
+/** --- Seccion Inferior --- **/
+
+.seccion-inferior{
+    display: flex;
+    justify-content: space-between;
+}
+.blog{
+    flex-basis: 80%;
+}
+.testimoniales{
+    flex-basis: calc(40% - 2rem);
+}
+.entrada-blog{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.entrada-blog:last-of-type{ /* Last-of-tipe: Para SELECCIONAR EL ULTIMO y                                  QUITARLE el margin "botton: 2rem" */
+    margin: 0;
+}
+.entrada-blog .imagen{
+    flex-basis: 40%;
+    
+}
+.entrada-blog .texto-entrada{
+    flex-basis: calc(60% - 3rem);
+}
+.texto-entrada a{
+    text-decoration: none;
+    color: black;
+}
+.texto-entrada h4 {
+    margin: 0;
+    line-height: 0.9;
+}
+.texto-entrada h4::after{ /* Pseudo Elemento: Aparece(crea) DESPUES del elemento... NO se PUEDE SLECCIONAR Y NO SON PARTE DEL HTML */
+    content: "";
+    display: block;
+    height: 0.6rem;
+    width: 17rem;
+    background-color: #71B100;
+    
+    margin-top: 1rem;
+}
+
+.texto-entrada span{
+    color: #E09700;
+}
+
+
+/** --- TESTIMONIALES --- **/
+
+.testimonial{
+    margin-top: 2rem;
+    background-color: #71B100;
+    font-size: 1.6rem;
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 2rem;
+    line-height: 2.7rem;
+    
+}
+.testimoniales p{
+    text-align: right;
+    margin-top: 2.6rem;
+    font-size: 1.8rem;
+}
+
+.testimonial blockquote::before{  /* Pseudo Elemento: Aparece (crea) ANTES del elemento... NO se PUEDE SLECCIONAR Y NO SON PARTE DEL HTML */
+    content: "";
+    background-image: url(../img/comilla.svg); /*Clase para posicionar la comilla*/
+    width: 5rem;
+    height: 5rem;
+    display: block;
+    position: absolute; /*Colocar el absolute a la clase padre*/
+    left: -2.3rem;
+    top: -2rem;
+}
+
+.testimonial blockquote{
+    position: relative; /*Colocar el Relative en la clase hijo*/
+    padding-left: 4rem;
+    padding-top: 2.5rem;
+}
+
+/** --- FOOTER --- **/
+
+.site-footer{
+    background-color: #333333;
+    margin: 0;
+}
+.contenedor-footer{
+    padding: 2.2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+.copyright{
+    color: white;
+    margin: 0;
+}
+
+
+/** ---- PAGINAs INTERNAS ---- **/
+
+.contenido-nosotros{
+    display: grid; /** En vez de usar "Flex" usamos "GRID" **/
+    grid-template-columns: repeat(2, 50%) ; /** Para separar en columna: 2 Formas mas de hacerlo: 50& 50& o 1fr 1fr**/
+    grid-column-gap: 2rem; /** Agregando Paddin con "Grid" **/
+}
+
+.contenido-nosotros blockquote{
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 0;
+    
+}
+
+/** --- FORMULARIO - CONTACTO --- **/
+
+form p{ /* Tengo que crear una "class" si no quiero que afecte a todos los parrafos */
+    color: #4f4f4f;
+    margin: 2rem 0 0 0; 
+}
+
+.forma-contacto{
+    justify-content: space-between;
+    display: flex;
+    max-width: 40rem;
+    /*align-items: center; Use margin: 1.3rem; para sulocionar el centado de otra manera */
+}
+
+fieldset{
+    margin-top: 1.5rem;
+    padding-top:1rem;
+}
+
+label{
+    display: block;
+    padding-top: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.contenido-centrado{
+    margin: 2rem 20%;
+}
+
+legend{
+    font-size: 2.3rem;
+    color:#333333;
+}
+
+input:not([type="submit"]),textarea, select /* :not ([])= Afecta todo los "submit" menos el ultimo "submit" */
+{
+    padding: 0.5rem;
+    display: block;
+    width: 98.5%;
+    background-color: #e1e1e1;
+    margin-bottom: 1rem;
+    border:none;
+    border-radius: 1.5rem;
+}
+
+input[type="radio"]{ 
+    width: auto;
+    margin: 1.3rem;
+}
+
+select{
+    -webkit-appearance:none; /* Prefijo de Chrome para que funcione "appearance:none"*/
+    appearance:none;
+}
+
+textarea{
+    height: 10rem;
+}
+
+
+
+
+
+
